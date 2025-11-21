@@ -9,6 +9,7 @@ import ContactSection from '../components/ContactSection';
 import Lanyard from '../components/Lanyard'; 
 import Navbar from '../components/Navbar'; 
 
+
 function Home() {
     // Tinggi dan lebar disesuaikan untuk tampilan di latar belakang
     const LANYARD_HEIGHT = '1000px'; 
