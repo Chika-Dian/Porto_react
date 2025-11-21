@@ -1,16 +1,13 @@
 import React from 'react';
-// Import ikon yang sesuai (atau gunakan ikon lain yang lebih spesifik jika perlu)
 import { FaPaintBrush, FaCode, FaLightbulb, FaBolt } from 'react-icons/fa'; 
 
-// Data untuk kartu Keahlian
 const skillsData = [
   { 
     id: 1, 
     title: "UI/UX Design", 
     subtitle: "Figma, Adobe XD, Sketch", 
     icon: FaPaintBrush, 
-    // Warna latar belakang yang lembut: Ungu Muda
-    bgColor: "bg-[#F3E8FF]", // Purple 100/Aura Ungu di desain
+    bgColor: "bg-[#F3E8FF]", 
     iconColor: "text-primary-purple"
   },
   { 
@@ -18,8 +15,7 @@ const skillsData = [
     title: "Frontend Dev", 
     subtitle: "React, Vue, Tailwind", 
     icon: FaCode, 
-    // Warna latar belakang yang lembut: Biru Muda
-    bgColor: "bg-[#E0F2FE]", // Blue 100/Aura Biru di desain
+    bgColor: "bg-[#E0F2FE]", 
     iconColor: "text-blue-500" 
   },
   { 
@@ -27,8 +23,7 @@ const skillsData = [
     title: "Branding", 
     subtitle: "Logo, Identity, Print", 
     icon: FaLightbulb, 
-    // Warna latar belakang yang lembut: Kuning
-    bgColor: "bg-[#FEF9C3]", // Yellow 100/Aura Kuning di desain
+    bgColor: "bg-[#FEF9C3]", 
     iconColor: "text-yellow-600" 
   },
   { 
@@ -36,8 +31,7 @@ const skillsData = [
     title: "3D Design", 
     subtitle: "After Effects, Blender ", 
     icon: FaBolt, 
-    // Warna latar belakang yang lembut: Ungu/Lavender
-    bgColor: "bg-[#EDE9FE]", // Indigo/Lavender di desain
+    bgColor: "bg-[#EDE9FE]", 
     iconColor: "text-indigo-500" 
   },
 ];
@@ -60,15 +54,15 @@ function SkillsSection() {
               // Card Styling (Hapus shadow dan border agar sesuai desain)
               className="p-4 rounded-2xl transition duration-300 hover:scale-[1.02] cursor-pointer"
             >
-              {/* Area Ikon dengan Warna Background Kustom */}
+              {/*  */}
               <div 
-                // Gunakan warna kustom dari data skillsData
+                
                 className={`w-full h-40 ${skill.bgColor} rounded-2xl mb-4 flex flex-col items-center justify-center p-6`}
               >
-                {/* Ikon */}
+                {/*  */}
                 <skill.icon className={`text-4xl mb-2 ${skill.iconColor}`} />
                 
-                {/* Judul di dalam kartu (sesuai desain) */}
+                {/*  */}
                 <h3 className="text-lg font-bold text-heading-dark mt-2">
                   {skill.title}
                 </h3>
@@ -77,8 +71,8 @@ function SkillsSection() {
                 </p>
               </div>
               
-              {/* Di desain, teks utama ada di dalam blok warna, bukan di luar */}
-              {/* Kita telah memindahkan teks ke dalam blok warna di atas */}
+              {/*  */}
+              {/*  */}
 
             </div>
           ))}

@@ -4,7 +4,7 @@ import { Send } from 'lucide-react';
 import profileImageLocal from '../assets/images/profile-hero.png'; // Gambar profil lokal
 
 function AboutSection() {
-  // Daftar keahlian
+  // Keahlianku
   const skills = [
     'UI/UX Design', 
     'Web Development', 
@@ -13,7 +13,7 @@ function AboutSection() {
     '3D Design'
   ];
   
-  // Kelas warna untuk tombol & tag
+  
   const buttonGradientClass = "bg-gradient-to-r from-violet-600 to-pink-500 hover:from-violet-700 hover:to-pink-600";
   const skillTagClass = "bg-purple-50 text-purple-600";
 
@@ -30,7 +30,7 @@ function AboutSection() {
           />
         </div>
 
-        {/* Konten Teks About Me */}
+        {/* Kontenku */}
         <div className="order-2 lg:order-2"> 
           <h2 className="text-4xl font-extrabold text-heading-dark mb-6 text-center lg:text-left">
             About Me
@@ -41,7 +41,7 @@ function AboutSection() {
             I specialize in creating beautiful, user-friendly digital experiences.
           </p>
           
-          {/* Daftar Keahlian */}
+          {/* Keahlian */}
           <div className="flex flex-wrap gap-3 mb-10 justify-center lg:justify-start">
             {skills.map((skill) => (
               <span 
@@ -61,7 +61,7 @@ function AboutSection() {
             ))}
           </div>
 
-          {/* Tombol Let's Connect panjang + scroll halus ke Contact */}
+          {/* */}
           <div className="flex justify-center lg:justify-start">
             <a 
               href="#contact"
