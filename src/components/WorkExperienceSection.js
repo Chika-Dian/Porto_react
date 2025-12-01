@@ -8,8 +8,6 @@ import gilar from '../assets/sertifikat/gilar.png';
 import gilar1 from '../assets/sertifikat/gilar1.png';
 
 
-
-
 // --- Data Pengalaman Kerja ---
 const workExperiences = [
 
