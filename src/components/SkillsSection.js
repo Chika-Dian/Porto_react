@@ -1,85 +1,87 @@
 import React from 'react';
-import { FaPaintBrush, FaCode, FaLightbulb, FaBolt } from 'react-icons/fa'; 
+import figma from '../assets/icons/Figma.png';
+import blender from '../assets/icons/blender.png';
+import Canva from '../assets/icons/canva.png';
+import react from '../assets/icons/react.png';
+import Trello from '../assets/icons/Trello.png';
+import reactbits from '../assets/icons/react_bits.png';
+import Tailwind from '../assets/icons/tailwind_css.png';
+import Notion from '../assets/icons/Notion.png';
+import Ibis from '../assets/icons/ibispaint.png';
 
-const skillsData = [
-  { 
-    id: 1, 
-    title: "UI/UX Design", 
-    subtitle: "Figma, Adobe XD, Sketch", 
-    icon: FaPaintBrush, 
-    bgColor: "bg-[#F3E8FF]", 
-    iconColor: "text-primary-purple"
-  },
-  { 
-    id: 2, 
-    title: "Frontend Dev", 
-    subtitle: "React, Vue, Tailwind", 
-    icon: FaCode, 
-    bgColor: "bg-[#E0F2FE]", 
-    iconColor: "text-blue-500" 
-  },
-  { 
-    id: 3, 
-    title: "Branding", 
-    subtitle: "Logo, Identity, Print", 
-    icon: FaLightbulb, 
-    bgColor: "bg-[#FEF9C3]", 
-    iconColor: "text-yellow-600" 
-  },
-  { 
-    id: 4, 
-    title: "3D Design", 
-    subtitle: "After Effects, Blender ", 
-    icon: FaBolt, 
-    bgColor: "bg-[#EDE9FE]", 
-    iconColor: "text-indigo-500" 
-  },
+const toolsData = [
+    { name: "Figma", category: "UI Design", iconSrc: figma }, 
+
+    { name: "Canva", category: "Digital Imaging", iconSrc: Canva },
+    
+    { name: "Blender", category: "3D Design", iconSrc: blender },
+    
+    { name: "React", category: "Frontend Framework", iconSrc: react },
+
+    { name: "React.bits", category: "UI Component Library", iconSrc: reactbits },
+
+    { name: "Tailwind", category: "Styling Framework", iconSrc: Tailwind },
+
+    { name: "Trello", category: "Project Management", iconSrc: Trello },
+
+    { name: "Notion", category: "Project Management", iconSrc: Notion },
+
+    { name: "Ibis Paint", category: "Digital Illustration", iconSrc: Ibis },
+
+   
 ];
 
-function SkillsSection() {
-  return (
-    <section id="skills" className="py-20 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
+const ToolCard = ({ name, category, iconSrc }) => (
+    
+    <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 transition duration-200 hover:bg-gray-100 border border-gray-100 shadow-sm">
         
-        {/* Judul sesuai desain */}
-        <h2 className="text-4xl font-extrabold text-heading-dark mb-16">
-          My Skills
-        </h2>
+        {
+            
+        }
+        <div className="w-10 h-10 flex-shrink-0">
+            {
 
-        {/* Grid Kartu Keahlian */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skillsData.map((skill) => (
-            <div 
-              key={skill.id} 
-              // Card Styling (Hapus shadow dan border agar sesuai desain)
-              className="p-4 rounded-2xl transition duration-300 hover:scale-[1.02] cursor-pointer"
-            >
-              {/*  */}
-              <div 
-                
-                className={`w-full h-40 ${skill.bgColor} rounded-2xl mb-4 flex flex-col items-center justify-center p-6`}
-              >
-                {/*  */}
-                <skill.icon className={`text-4xl mb-2 ${skill.iconColor}`} />
-                
-                {/*  */}
-                <h3 className="text-lg font-bold text-heading-dark mt-2">
-                  {skill.title}
-                </h3>
-                <p className="text-sm text-text-gray/80">
-                  {skill.subtitle}
-                </p>
-              </div>
-              
-              {/*  */}
-              {/*  */}
-
-            </div>
-          ))}
+            }
+            <img 
+                src={iconSrc} 
+                alt={`${name} icon`} 
+                className="w-full h-full object-contain rounded-md" 
+            />
         </div>
-      </div>
-    </section>
-  );
+        
+        {/* Teks Alat */}
+        <div className="text-left">
+            <h3 className="text-base font-semibold text-gray-800">{name}</h3>
+            <p className="text-xs text-gray-500 mt-0.5">{category}</p>
+        </div>
+    </div>
+);
+
+
+function SkillsSection() {
+    return (
+        <section id="skills" className="py-20 md:py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
+                
+                {/* Judul diubah agar lebih sesuai */}
+                <h2 className="text-4xl font-extrabold text-heading-dark mb-16">
+                    Tools I Use
+                </h2>
+
+                {/*  */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                    {toolsData.map((tool, index) => (
+                        <ToolCard 
+                            key={index}
+                            name={tool.name}
+                            category={tool.category}
+                            iconSrc={tool.iconSrc}
+                        />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default SkillsSection;

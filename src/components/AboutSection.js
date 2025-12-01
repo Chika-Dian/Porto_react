@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa'; 
 import { Send } from 'lucide-react'; 
-import profileImageLocal from '../assets/images/profile-hero.png'; // Gambar profil lokal
+import profileImageLocal from '../assets/foto/profil.jpeg'; 
 
 function AboutSection() {
   // Keahlianku

@@ -1,8 +1,8 @@
-// src/pages/Home.jsx
 import React, { Suspense } from 'react';
 import ProfileCard from '../components/ProfileCard';
 import AboutSection from '../components/AboutSection';
 import SkillsSection from '../components/SkillsSection';
+import WorkExperienceSection from '../components/WorkExperienceSection';
 import PortfolioSection from '../components/PortfolioSection';
 import ContactSection from '../components/ContactSection';
 import Lanyard from '../components/Lanyard';
@@ -15,7 +15,7 @@ function Home() {
     return (
         <main className="relative">
 
-            {/* 3D Lanyard di background, bisa dimainkan */}
+            {/* 3D Lanyard */}
             <div
                 className="absolute right-16 z-0 hidden lg:block"
                 style={{
@@ -33,6 +33,7 @@ function Home() {
             <ProfileCard />
             <AboutSection />
             <SkillsSection />
+            <WorkExperienceSection />
             <PortfolioSection />
             <ContactSection />
         </main>
